@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section id="wrapper">
+
+	{% include spotlight.html %}
+
+	<section id="four" class="wrapper alt style1">
+		<div class="inner">
+			<h2 class="major">{{ site.postsTitle }}</h2>
+			<p>{{ site.postsDescription }}</p>
+			<section class="features">
+				{% for post in site.posts %}
+					<article>
+						<a href="{{ post.url | prepend: site.baseurl }}" class="image"><img src="{{ post.image }}" alt="" /></a>
+						<h3 class="major">{{ post.title }}</h3>
+						<span>{{ post.date | date: "%b %-d, %Y" }}</span>
+						<p>{{ post.tagline }}</p>
+						<a href="{{ post.url | prepend: site.baseurl }}" class="special">Learn more</a>
+					</article>
+				{% endfor %}
+			</section>
+			<!-- <ul class="actions">
+				<li><a href="#" class="button">Browse All</a></li>
+			</ul> -->
+		</div>
+	</section>
+
+</section>

@@ -1,0 +1,48 @@
+<section id="footer">
+  <div class="inner">
+    <h2 class="major">{{ site.contactTitle }}</h2>
+    <p>{{ site.contactDescription }}</p>
+    <form method="post" action="http://formspree.io/{{ site.email }}">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="4"></textarea>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message" /></li>
+      </ul>
+    </form>
+    <ul class="contact">
+      <li class="fa-envelope"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      {% if site.twitter %}
+        <li class="fa-twitter"><a href="https://www.twitter.com/{{ site.twitter }}">twitter.com/{{ site.twitter }}</a></li>
+      {% endif %}
+      {% if site.facebook %}
+      <li class="fa-facebook"><a href="https://www.facebook.com/{{ site.facebook }}">facebook.com/{{ site.facebook }}</a></li>
+      {% endif %}
+      {% if site.instagram %}
+        <li class="fa-instagram"><a href="https://www.instagram.com/{{ site.instagram }}">instagram.com/{{ site.instagram }}</a></li>
+      {% endif %}
+      {% if site.youtube %}
+        <li class="fa-youtube"><a href="https://www.youtube.com/user/{{ site.youtube }}">youtube.com/{{ site.youtube }}</a></li>
+      {% endif %}
+      {% if site.mailingAddress %}
+        <li class="fa-home">{{ site.mailingAddress }}</li>
+      {% endif %}
+      {% if site.phone %}
+        <li class="fa-phone">{{ site.phone }}</li>
+      {% endif %}
+      <li class="fa-rss"><a href="{{ site.baseurl }}/feed.xml">subscribe via RSS</a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; {{ site.copyright }}. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </div>
+</section>
